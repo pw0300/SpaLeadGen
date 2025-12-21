@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+:root {
+  /* Colors */
+  --color-primary: #2C3E30;
+  /* Deep Forest Green */
+  --color-primary-light: #3D5643;
+  --color-secondary: #D4AF37;
+  /* Gold */
+  --color-secondary-light: #E5C565;
+  --color-bg: #F9F9F7;
+  /* Very light warm beige */
+  --color-surface: #FFFFFF;
+  --color-text: #2C3E30;
+  /* Using primary as dark text for harmony */
+  --color-text-light: #666666;
+
+  /* Typography */
+  --font-heading: 'Playfair Display', serif;
+  --font-body: 'Lato', sans-serif;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+  --space-xl: 8rem;
+
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+
+  /* Container */
+  --container-width: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1.2;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Utilities */
+.container {
+  max-width: var(--container-width);
+  margin: 0 auto;
+  padding: 0 var(--space-sm);
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 32px;
+  font-family: var(--font-body);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #fff;
+  /* White looks better on dark green usually, or Gold */
+  /* Using white for better contrast, Gold can be used for borders or accents */
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-light);
+  transform: translateY(-2px);
+  color: var(--color-secondary);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.btn-gold {
+  background-color: var(--color-secondary);
+  color: #FFFFFF;
+}
+
+.btn-gold:hover {
+  background-color: var(--color-secondary-light);
+  transform: translateY(-2px);
+}
+
+.text-gold {
+  color: var(--color-secondary);
+}
+
+.section {
+  padding: var(--space-lg) 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Helper to hide scrollbar but keep functionality if needed */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

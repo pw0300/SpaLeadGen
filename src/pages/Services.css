@@ -1,0 +1,99 @@
+.page-header {
+    background-color: var(--color-primary);
+    color: #fff;
+    padding: 8rem 0 4rem;
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+}
+
+.services-header {
+    /* Ideally add a subtle pattern or image overlay here */
+    background: linear-gradient(rgba(44, 62, 48, 0.9), rgba(44, 62, 48, 0.8));
+}
+
+.category-title {
+    font-size: 2rem;
+    color: var(--color-secondary);
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5rem;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-heading);
+}
+
+.menu-items {
+    display: grid;
+    gap: 2rem;
+}
+
+.menu-item {
+    padding-bottom: 1.5rem;
+    border-bottom: 1px dashed #eee;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.menu-item-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 0.5rem;
+}
+
+.menu-item-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    flex-shrink: 0;
+}
+
+.menu-item-dots {
+    flex-grow: 1;
+    border-bottom: 1px dotted #ccc;
+    margin: 0 1rem;
+    position: relative;
+    top: -5px;
+}
+
+.menu-item-price {
+    font-weight: 700;
+    color: var(--color-text);
+    flex-shrink: 0;
+}
+
+.menu-item-desc {
+    color: var(--color-text-light);
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+.menu-item-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.duration {
+    font-size: 0.85rem;
+    font-style: italic;
+    color: #888;
+}
+
+.btn-book-sm {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--color-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-book-sm:hover {
+    text-decoration: underline;
+}
+
+.mt-sm {
+    margin-top: 1.5rem;
+}
