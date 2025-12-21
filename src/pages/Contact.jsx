@@ -8,7 +8,8 @@ const Contact = () => {
         name: '',
         email: '',
         phone: '',
-        treatment: 'Royal Thai Massage',
+        branch: 'Sukhumvit 33',
+        treatment: 'Thai Massage',
         date: '',
         message: ''
     });
@@ -21,7 +22,6 @@ const Contact = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Simulate Submission
         console.log('Lead Captured:', formData);
         setSubmitted(true);
     };
@@ -30,22 +30,38 @@ const Contact = () => {
         <div className="contact-page">
             <header className="page-header contact-header">
                 <div className="container">
-                    <h1 className="fade-in-up">Book Your Sanctuary</h1>
-                    <p className="fade-in-up delay-1">Begin your journey to relaxation.</p>
+                    <h1 className="fade-in-up">Reserve Your Moment</h1>
+                    <p className="fade-in-up delay-1">Choose your preferred sanctuary in Bangkok.</p>
                 </div>
             </header>
 
             <div className="container section contact-layout">
                 {/* Contact Info */}
                 <div className="contact-info">
-                    <h2>Get in Touch</h2>
-                    <p className="mb-md">We look forward to welcoming you. Please book in advance to ensure availability.</p>
+                    <h2>Our Branches</h2>
+                    <p className="mb-md">We have multiple convenient locations in the heart of Bangkok.</p>
 
                     <div className="info-item">
                         <MapPin className="text-gold" />
                         <div>
-                            <h3>Location</h3>
-                            <p>123 Sukhumvit Road Soi 55<br />Thong Lo, Bangkok 10110</p>
+                            <h3>Makkha Heritage Asoke</h3>
+                            <p>348/1 Sukhumvit Road (near BTS Asok)</p>
+                        </div>
+                    </div>
+
+                    <div className="info-item">
+                        <MapPin className="text-gold" />
+                        <div>
+                            <h3>Makkha Sukhumvit 33</h3>
+                            <p>7/7 Sukhumvit 33 Alley (near Phrom Phong)</p>
+                        </div>
+                    </div>
+
+                    <div className="info-item">
+                        <MapPin className="text-gold" />
+                        <div>
+                            <h3>Makkha Sukhumvit 24</h3>
+                            <p>43/1 Soi Sukhumvit 24</p>
                         </div>
                     </div>
 
@@ -53,23 +69,15 @@ const Contact = () => {
                         <Clock className="text-gold" />
                         <div>
                             <h3>Opening Hours</h3>
-                            <p>Daily: 10:00 AM - 10:00 PM<br />Last booking: 9:00 PM</p>
+                            <p>Daily: 10:00 AM - Midnight<br />Last booking: 11:00 PM</p>
                         </div>
                     </div>
 
                     <div className="info-item">
                         <Phone className="text-gold" />
                         <div>
-                            <h3>Phone</h3>
-                            <p>+66 2 123 4567</p>
-                        </div>
-                    </div>
-
-                    <div className="info-item">
-                        <Mail className="text-gold" />
-                        <div>
-                            <h3>Email</h3>
-                            <p>reservations@siamserenity.com</p>
+                            <h3>Contact Us</h3>
+                            <p>+66 2 123 4567<br />reservation@makkha.com</p>
                         </div>
                     </div>
                 </div>
@@ -79,13 +87,23 @@ const Contact = () => {
                     {submitted ? (
                         <div className="success-message">
                             <h3 className="text-gold">Request Received!</h3>
-                            <p>Thank you, {formData.name}. We have received your booking request.</p>
+                            <p>Thank you, {formData.name}. We have received your booking request for the <strong>{formData.branch}</strong> branch.</p>
                             <p>Our concierge will contact you shortly via WhatsApp/Email to confirm your appointment.</p>
                             <button className="btn btn-secondary mt-md" onClick={() => setSubmitted(false)}>Book Another</button>
                         </div>
                     ) : (
                         <form className="contact-form" onSubmit={handleSubmit}>
                             <h3 className="form-title">Request an Appointment</h3>
+
+                            <div className="form-group">
+                                <label>Preferred Branch</label>
+                                <select name="branch" value={formData.branch} onChange={handleChange}>
+                                    <option>Sukhumvit 33</option>
+                                    <option>Sukhumvit 24</option>
+                                    <option>Heritage Asoke</option>
+                                    <option>BTS Asoke</option>
+                                </select>
+                            </div>
 
                             <div className="form-group">
                                 <label>Full Name</label>
@@ -106,12 +124,12 @@ const Contact = () => {
                                 <div className="form-group">
                                     <label>Preferred Treatment</label>
                                     <select name="treatment" value={formData.treatment} onChange={handleChange}>
-                                        <option>Royal Thai Massage</option>
-                                        <option>Aromatherapy Oil</option>
-                                        <option>Deep Tissue Sport</option>
-                                        <option>Facial Treatment</option>
+                                        <option>Thai Massage</option>
+                                        <option>Aroma Oil Massage</option>
+                                        <option>Indian Head Massage</option>
+                                        <option>4-Hand Massage</option>
+                                        <option>Hot Stone Therapy</option>
                                         <option>Spa Package</option>
-                                        <option>Other / Not Sure</option>
                                     </select>
                                 </div>
                                 <div className="form-group">
@@ -122,7 +140,7 @@ const Contact = () => {
 
                             <div className="form-group">
                                 <label>Special Requests</label>
-                                <textarea name="message" rows="3" value={formData.message} onChange={handleChange} placeholder="Any specific needs or preferences?"></textarea>
+                                <textarea name="message" rows="3" value={formData.message} onChange={handleChange} placeholder="Any specific needs?"></textarea>
                             </div>
 
                             <button type="submit" className="btn btn-primary full-width">Send Request</button>

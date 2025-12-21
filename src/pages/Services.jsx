@@ -3,28 +3,29 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import './Services.css';
 
+
 const servicesData = [
     {
-        category: "Traditional Thai",
+        category: "Traditional Massages",
         items: [
-            { name: "Royal Thai Massage", duration: "60/90/120 min", price: "1,500 / 2,100 / 2,600 THB", desc: "Ancient healing art using acupressure and stretching." },
-            { name: "Thai Herbal Compress", duration: "90/120 min", price: "2,400 / 2,900 THB", desc: "Warm herbal pouches pressed on muscles to relieve pain and inflammation." },
-            { name: "Foot Reflexology", duration: "60 min", price: "1,200 THB", desc: "Stimulating reflex points on the feet to improve internal organ function." }
+            { name: "Thai Massage", duration: "60/120 min", price: "850 / 1,500 THB", desc: "Authentic healing art using acupressure and stretching techniques to realign the body." },
+            { name: "Thai Herbal Ball Massage", duration: "60/90 min", price: "1,390 / 1,900 THB", desc: "Traditional Thai massage followed by warm herbal compresses to relieve muscle tension." },
+            { name: "Indian Head Massage", duration: "60 min", price: "1,200 THB", desc: "Relaxing head, neck, and shoulder massage to relieve stress and improve sleep." }
         ]
     },
     {
-        category: "Aromatherapy & Oil",
+        category: "Aromatic & Oil Treatments",
         items: [
-            { name: "Aromatherapy Oil Massage", duration: "60/90 min", price: "2,200 / 2,800 THB", desc: "Gentle Swedish strokes with organic essential oils." },
-            { name: "Deep Tissue Sport", duration: "60/90 min", price: "2,400 / 3,000 THB", desc: "Strong pressure targeting deep muscle layers." },
-            { name: "Hot Stone Therapy", duration: "90 min", price: "3,200 THB", desc: "Smooth heated stones placed on the body to melt away tension." }
+            { name: "Aroma Oil Massage", duration: "60/90 min", price: "1,390 / 2,000 THB", desc: "Gentle massage using 100% natural essential oils extracted from plants and flowers." },
+            { name: "Hot Stone Massage", duration: "90 min", price: "2,500 THB", desc: "Smooth heated stones placed on key energy points to melt away deep-seated tension." },
+            { name: "4-Hand Aroma Oil Massage", duration: "60 min", price: "2,500 THB", desc: "The ultimate indulgence with two therapists working in synchronized harmony." }
         ]
     },
     {
-        category: "Facial Treatments",
+        category: "Body & Facial",
         items: [
-            { name: "Organic Radiance Facial", duration: "60 min", price: "2,800 THB", desc: "Restores glow using all-natural ingredients." },
-            { name: "Anti-Aging Gold Facial", duration: "90 min", price: "3,500 THB", desc: "Luxurious treatment with collagen and 24k gold flakes." }
+            { name: "Body Salt Scrub", duration: "60 min", price: "1,200 THB", desc: "Exfoliating treatment using natural sea salt to remove dead skin cells." },
+            { name: "Office Syndrome Relief", duration: "60/90 min", price: "1,000 / 1,400 THB", desc: "Targeted massage for back, neck, and shoulders to relieve office-related strain." }
         ]
     }
 ];

@@ -1,6 +1,6 @@
 /* Hero Section */
 .hero {
-    height: 100vh;
+    height: 90vh;
     min-height: 600px;
     background-size: cover;
     background-position: center;
@@ -9,31 +9,33 @@
     align-items: center;
     justify-content: center;
     margin-top: -80px;
-    /* Counteract navbar */
 }
 
 .hero-content {
     text-align: center;
-    color: #fff;
     z-index: 10;
     max-width: 800px;
 }
 
+.hero-content.text-dark {
+    color: var(--color-primary);
+}
+
 .hero-title {
-    font-size: 4rem;
+    font-size: 4.5rem;
     font-family: var(--font-heading);
     font-weight: 700;
-    margin-bottom: 1.5rem;
-    letter-spacing: -1px;
-    color: #fff;
-    text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+    text-shadow: none;
+    /* Removing shadow for cleaner look */
 }
 
 .hero-subtitle {
     font-size: 1.25rem;
     margin-bottom: 2.5rem;
-    font-weight: 300;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    font-weight: 400;
+    color: var(--color-text);
     max-width: 600px;
     margin-left: auto;
     margin-right: auto;
@@ -45,7 +47,7 @@
     justify-content: center;
 }
 
-/* Animations */
+/* Animations - same as before */
 .fade-in-up {
     opacity: 0;
     transform: translateY(20px);
@@ -69,9 +71,12 @@
 
 /* Trust Bar */
 .trust-bar {
-    background-color: var(--color-primary);
-    color: var(--color-surface);
-    padding: 1.5rem 0;
+    padding: 2rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.bg-surface {
+    background-color: var(--color-surface);
 }
 
 .trust-grid {
@@ -86,7 +91,8 @@
     align-items: center;
     gap: 0.75rem;
     font-size: 0.95rem;
-    font-weight: 500;
+    font-weight: 600;
+    color: var(--color-text);
 }
 
 .trust-icon {
@@ -98,15 +104,18 @@
     font-size: 2.5rem;
     margin-bottom: 1rem;
     color: var(--color-primary);
+    font-weight: 400;
+    /* Makkha style is elegant, not bold */
 }
 
 .section-subtitle {
     font-size: 1.1rem;
     color: var(--color-text-light);
     margin-bottom: 3rem;
-    max-width: 600px;
+    max-width: 700px;
     margin-left: auto;
     margin-right: auto;
+    line-height: 1.8;
 }
 
 /* Services Grid */
@@ -119,15 +128,16 @@
 
 .service-card {
     background: #fff;
-    border-radius: var(--radius-md);
+    border: 1px solid #f0f0f0;
+    border-radius: var(--radius-sm);
+    /* Sharper corners for modern look */
     overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
 }
 
 .service-img {
@@ -139,59 +149,84 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
+    transition: transform 0.6s ease;
 }
 
 .service-card:hover .service-img img {
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 .service-info {
-    padding: 1.5rem;
+    padding: 2rem;
+    text-align: center;
 }
 
 .service-info h3 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     margin-bottom: 0.5rem;
+    font-weight: 400;
 }
 
 .service-info p {
     color: var(--color-text-light);
     font-size: 0.95rem;
     margin-bottom: 1.5rem;
-    line-height: 1.5;
 }
 
 .service-meta {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 1px solid #EEE;
+    border-top: 1px solid #f9f9f9;
     padding-top: 1rem;
 }
 
 .price {
     font-weight: 700;
-    color: var(--color-primary);
+    color: var(--color-secondary);
 }
 
 .service-link {
-    color: var(--color-secondary);
-    font-weight: 600;
+    color: var(--color-primary);
+    font-size: 0.9rem;
     display: flex;
     align-items: center;
     gap: 0.25rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
-.service-link:hover {
-    text-decoration: underline;
+/* Signature Feature */
+.signature-feature {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.feature-img img {
+    border-radius: var(--radius-md);
+}
+
+.feature-text h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.feature-list {
+    margin-top: 1.5rem;
+}
+
+.feature-list li {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 0.8rem;
+    color: var(--color-secondary);
+    font-weight: 600;
 }
 
 /* Testimonials */
-.bg-light {
-    background-color: #FFF;
-}
-
 .testimonials-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -199,14 +234,14 @@
 }
 
 .testimonial-card {
-    background-color: var(--color-bg);
-    padding: 2rem;
-    border-radius: var(--radius-md);
+    background-color: #fff;
+    padding: 2.5rem;
+    border: 1px solid #eee;
     text-align: center;
 }
 
 .stars {
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
 }
 
 .testimonial-text {
@@ -214,71 +249,16 @@
     font-size: 1.1rem;
     margin-bottom: 1.5rem;
     color: var(--color-text);
+    line-height: 1.8;
 }
 
 .testimonial-author {
     font-weight: 700;
     color: var(--color-primary);
     font-family: var(--font-heading);
-}
-
-/* CTA Section */
-.cta-section {
-    background-color: var(--color-primary);
-    color: #fff;
-    padding: 5rem 0;
-}
-
-.cta-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-}
-
-.cta-text {
-    flex: 1;
-    min-width: 300px;
-}
-
-.cta-text h2 {
-    color: var(--color-secondary);
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.cta-text p {
-    font-size: 1.1rem;
-    margin-bottom: 1.5rem;
-    color: #eee;
-}
-
-.cta-benefits {
-    list-style: none;
-}
-
-.cta-benefits li {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 0.5rem;
-    font-weight: 500;
-}
-
-.cta-action {
-    text-align: center;
-}
-
-.btn-xl {
-    padding: 16px 40px;
-    font-size: 1.2rem;
-}
-
-.cta-subtext {
-    margin-top: 0.8rem;
-    font-size: 0.85rem;
-    opacity: 0.8;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .mt-lg {
@@ -288,26 +268,10 @@
 /* Responsive */
 @media (max-width: 768px) {
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
-    .hero-cta {
-        flex-direction: column;
-        padding: 0 2rem;
-    }
-
-    .trust-grid {
-        flex-direction: column;
-        align-items: center;
-        gap: 1rem;
-    }
-
-    .cta-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .cta-benefits li {
-        justify-content: center;
+    .signature-feature {
+        grid-template-columns: 1fr;
     }
 }

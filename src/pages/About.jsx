@@ -16,11 +16,12 @@ const About = () => {
 
             <div className="container section">
                 <div className="about-grid">
+
                     <div className="about-content">
                         <h2 className="section-title">A Sanctuary in the City</h2>
-                        <p>Founded in 2010, Siam Serenity Spa began with a simple mission: to create a refuge of silence and healing amidst the chaotic energy of Bangkok.</p>
+                        <p>Makkha Health & Spa is an oasis of calm amidst the chaotic energy of Bangkok.</p>
                         <p>Our philosophy is rooted in the ancient Thai concept of "Sabai" (comfort and well-being). We believe that true relaxation is not just a luxury, but a necessity for a balanced life.</p>
-                        <p>Every element of our spa, from the sustainable teak wood architecture to the hand-picked organic herbs used in our compresses, is curated to transport you to a state of deep peace.</p>
+                        <p>Every element of our spa, from the sustainable white wood architecture to the hand-picked organic herbs used in our compresses, is curated to transport you to a state of deep peace.</p>
                     </div>
                     <div className="about-image">
                         <img src={massageImg} alt="Interior of Siam Serenity Spa" />
@@ -28,17 +29,16 @@ const About = () => {
                 </div>
             </div>
 
-            <div className="bg-light section">
-                <div className="container about-grid reverse">
-                    <div className="about-content">
-                        <h2 className="section-title">Our Therapists</h2>
-                        <p>We believe that the heart of a great spa lies in the hands of its therapists.</p>
-                        <p>All our practitioners are certified by the Wat Po Traditional Medical School and have a minimum of 5 years of experience. They undergo rigorous training in our signature "Siam Serenity Touch," which blends therapeutic precision with intuitive care.</p>
-                        <p>We treat our staff like family, ensuring they are happy and well-rested, because we know that positive energy is transferred through touch.</p>
-                    </div>
-                    <div className="about-image">
-                        <img src={facialImg} alt="Therapist performing treatment" />
-                    </div>
+
+            <div className="container section about-grid reverse">
+                <div className="about-content">
+                    <h2 className="section-title">Our Therapists</h2>
+                    <p>We believe that the heart of a great spa lies in the hands of its therapists.</p>
+                    <p>All our practitioners are certified by the Wat Po Traditional Medical School and have a minimum of 5 years of experience. They undergo rigorous training in our signature "Makkha Flow," which blends therapeutic precision with intuitive care.</p>
+                    <p>We treat our staff like family, ensuring they are happy and well-rested, because we know that positive energy is transferred through touch.</p>
+                </div>
+                <div className="about-image">
+                    <img src={facialImg} alt="Therapist performing treatment" />
                 </div>
             </div>
 

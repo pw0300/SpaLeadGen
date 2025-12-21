@@ -1,19 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 
 :root {
-  /* Colors */
-  --color-primary: #2C3E30;
-  /* Deep Forest Green */
-  --color-primary-light: #3D5643;
-  --color-secondary: #D4AF37;
-  /* Gold */
-  --color-secondary-light: #E5C565;
-  --color-bg: #F9F9F7;
-  /* Very light warm beige */
-  --color-surface: #FFFFFF;
-  --color-text: #2C3E30;
-  /* Using primary as dark text for harmony */
-  --color-text-light: #666666;
+  /* Colors - Makkha Minimalist Zen */
+  --color-primary: #4A4A4A;
+  /* Dark Grey Text */
+  --color-primary-light: #666666;
+  --color-secondary: #8C7853;
+  /* Muted Gold / Earth */
+  --color-secondary-light: #A8936D;
+  --color-bg: #FFFFFF;
+  /* Pure White */
+  --color-surface: #F9F9F9;
+  /* Very Light Grey */
+  --color-accent: #4A6741;
+  /* Natural Green */
+  --color-text: #333333;
+  --color-text-light: #777777;
 
   /* Typography */
   --font-heading: 'Playfair Display', serif;
@@ -96,27 +98,24 @@ ul {
 }
 
 .btn-primary {
-  background-color: var(--color-primary);
+  background-color: var(--color-secondary);
   color: #fff;
-  /* White looks better on dark green usually, or Gold */
-  /* Using white for better contrast, Gold can be used for borders or accents */
 }
 
 .btn-primary:hover {
-  background-color: var(--color-primary-light);
+  background-color: var(--color-secondary-light);
   transform: translateY(-2px);
-  color: var(--color-secondary);
 }
 
 .btn-secondary {
   background-color: transparent;
-  border: 1px solid var(--color-primary);
-  color: var(--color-primary);
+  border: 1px solid var(--color-secondary);
+  color: var(--color-secondary);
 }
 
 .btn-secondary:hover {
-  background-color: var(--color-primary);
-  color: var(--color-white);
+  background-color: var(--color-secondary);
+  color: #fff;
 }
 
 .btn-gold {
@@ -141,7 +140,6 @@ ul {
   text-align: center;
 }
 
-/* Helper to hide scrollbar but keep functionality if needed */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
